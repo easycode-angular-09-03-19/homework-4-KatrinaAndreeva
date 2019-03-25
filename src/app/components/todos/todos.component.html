@@ -3,9 +3,9 @@
         <div style="flex-grow: 1">
             <app-add-to-do (addedToDoItem)='addToDo($event)'></app-add-to-do>
             <hr>
-            <ng-container *ngIf="tasks.length > 0">
+            <ng-container *ngIf="todos.length > 0">
             </ng-container>
-            <!-- <app-todo-item *ngFor="let task of tasks" [task]="task" (deleteTodo)="deleteTodo($event)" [todoCompleted]="todo.completed"></app-todo-item> -->
+            <app-todo-item *ngFor="let todo of todos" [todo]="todo" (toDeleteToDo)="deleteTodo($event)" [toDoCompletes]="todo.completed"></app-todo-item>
         </div>
     </div>
 </div>

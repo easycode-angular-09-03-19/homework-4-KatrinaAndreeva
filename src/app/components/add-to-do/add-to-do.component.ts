@@ -11,8 +11,8 @@ import { generateId } from '../generateID/generateID';
 export class AddToDoComponent implements OnInit {
   @Output() addedToDoItem: EventEmitter<ToDoInterface> = new EventEmitter<ToDoInterface>();
 
-  ToDoTitle = '';
-  ToDoDescription = '';
+  TodoName = '';
+  TodoDescription = '';
 
   constructor() { }
 
@@ -22,13 +22,13 @@ export class AddToDoComponent implements OnInit {
   addToDo() {
     this.addedToDoItem.emit({
       id: generateId(),
-      title: this.ToDoTitle,
-      description: this.ToDoDescription,
-      complete: false
+      name: this.TodoName,
+      description: this.TodoDescription,
+      completed: false
     });
     
-    this.ToDoTitle = '';
-    this.ToDoDescription = '';
+    this.TodoName = '';
+    this.TodoDescription = '';
   }
 
   

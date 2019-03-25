@@ -1,6 +1,6 @@
 export interface ToDoInterface {
     id: string;
-    title: string;
+    name: string;
     description?: string;
-    complete: boolean
+    completed: boolean;
 }

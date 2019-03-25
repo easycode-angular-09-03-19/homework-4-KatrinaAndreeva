@@ -1,9 +1,10 @@
-<div>
-    <div>
-        <div>{{ task.name }}</div>
-        <div (click)="delete()">Delete </div>
+<div class="card mb-3" [ngClass]="'class.border-' + completeClass">
+    <div class="card-header" style="display: flex">
+        <div style="flex-grow: 1; margin-right: 5px">{{ todo.name }}</div>
+        <div style="margin-right: 5px"><a href="#" class="badge badge-pill badge-danger" (click)="delete()">Delete</a></div>
+        <div><a href="#" class="badge badge-pill" [ngClass]="'badge-' + completeClass" (click)="complete()">{{completeTag}}</a></div>
     </div>
-    <div>
-        <p>{{ task.description }}</p>
+    <div class="card-body text">
+        <p class="card-text">{{ todo.description }}</p>
     </div>
 </div>
