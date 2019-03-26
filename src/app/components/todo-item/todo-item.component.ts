@@ -32,8 +32,10 @@ export class TodoItemComponent implements OnInit, OnChanges {
 
   delete() {
     const Confirm = confirm("Delete a task?");
-    if(confirm) {
+    if(Confirm) {
       this.toDeleteToDo.emit(this.todo.id);
+    } else {
+      return;
     }
   }
 
