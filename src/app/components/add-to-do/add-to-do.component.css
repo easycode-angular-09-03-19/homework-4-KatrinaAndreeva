@@ -1,0 +1,10 @@
+.form-control {
+    margin: 20px auto;
+    max-width: 50%;
+}
+
+.btn-add:hover {
+    background-color: green;
+    color: black;
+    font-weight: 500;
+}

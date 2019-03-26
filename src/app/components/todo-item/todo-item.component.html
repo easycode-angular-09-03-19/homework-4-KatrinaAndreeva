@@ -1,10 +1,10 @@
-<div class="card mb-3" [ngClass]="'class.border-' + completeClass">
-    <div class="card-header" style="display: flex">
-        <div style="flex-grow: 1; margin-right: 5px">{{ todo.name }}</div>
-        <div style="margin-right: 5px"><a href="#" class="badge badge-pill badge-danger" (click)="delete()">Delete</a></div>
-        <div><a href="#" class="badge badge-pill" [ngClass]="'badge-' + completeClass" (click)="complete()">{{completeTag}}</a></div>
+<div class="card mb-3">
+    <div class="card-header" [ngStyle]="{'background-color': 'pink', 'display': 'flex'}">
+        <div [ngStyle]="{'flex-grow': '1', 'margin-right': '10px'}">{{ todo.name }}</div>
+        <div [ngStyle]="{'margin-right': '10px'}"><a href="#" class="badge badge-pill badge-danger" (click)="delete()">Delete</a></div>
+        <div><a href="#" class="badge badge-success" [ngClass]="'badge-' + completeClass" (click)="complete()">{{completeTag}}</a></div>
     </div>
-    <div class="card-body text">
+    <div class="card-body text" [ngStyle]="{'background-color': 'lightgoldenrodyellow'}">
         <p class="card-text">{{ todo.description }}</p>
     </div>
 </div>

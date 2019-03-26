@@ -1,3 +1,3 @@
-<input type="text" class="form-control" [(ngModel)]="TodoName" />
-<input type="text" class="form-control" [(ngModel)]="Tododescription" />
-<button (click)="addToDo()">Add the task</button>
+<input type="text" class="form-control" [(ngModel)]="TodoName" placeholder="Input task name" />
+<input type="text" class="form-control" [(ngModel)]="TodoDescription" placeholder="Input task information" />
+<button class="form-control btn-add" [ngStyle]="{'margin': '20px auto'}" (click)="addToDo()">Add the task</button>
